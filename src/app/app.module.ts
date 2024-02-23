@@ -27,6 +27,7 @@ import {
 import { MasterTableInfoService } from './Services/master-table-info.service';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 
+
 @NgModule({
   declarations: [AppComponent],
   imports: [

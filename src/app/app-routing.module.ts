@@ -27,6 +27,15 @@ export const routes: Routes = [
 {
   path:'auth',
   loadChildren:()=>import('./auth/auth.module').then(m =>m.AuthModule)
+},
+  {
+    path : '',
+    redirectTo : 'master-data-upload',
+    pathMatch : 'full'
+  },
+{
+  path:'master-data-upload',
+  loadChildren:() => import('./pages/masters/masters.module').then(m=>m.MastersModule)
 }
 ];
 
