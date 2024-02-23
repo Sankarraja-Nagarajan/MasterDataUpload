@@ -20,6 +20,8 @@
 @import './layout';
 @import './overrides';
 
+
+@import '~bootstrap-icons/font/bootstrap-icons.css';
 // install the framework and custom global styles
 @include nb-install() {
 
@@ -35,4 +37,22 @@
 };
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  ; }
+
+.row{
+  --bs-gutter-x : 0px !important;
+}
+::-webkit-scrollbar{
+  width: 3px;
+  height: 4px;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: #8286b3 !important;
+}
+
+::-webkit-scrollbar-track{
+  background-color: #e0e0e0;
+}

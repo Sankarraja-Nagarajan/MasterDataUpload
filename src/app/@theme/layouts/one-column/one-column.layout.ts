@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NbMenuService } from '@nebular/theme';
 
 @Component({
   selector: 'ngx-one-column-layout',
@@ -23,4 +24,16 @@ import { Component } from '@angular/core';
     </nb-layout>
   `,
 })
-export class OneColumnLayoutComponent {}
+export class OneColumnLayoutComponent {
+
+  selectedMenu;
+  constructor(private _menuService : NbMenuService){
+    
+  }
+  itemSelected(){
+    this._menuService.getSelectedItem('menu-sidebar').subscribe((data) => {
+      console.log(data?.item.title);
+    })
+  }
+  
+}

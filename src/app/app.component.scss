@@ -1,0 +1,8 @@
+::ng-deep .menu-item a:hover,
+::ng-deep .menu-icon a:hover .menu-icon,
+::ng-deep .menu-item a.active,
+::ng-deep .menu-item a.active .menu-icon,
+::ng-deep .menu-item a:hover .menu-icon
+{ 
+    color: #6d89bd !important;
+}
