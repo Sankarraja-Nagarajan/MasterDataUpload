@@ -10,7 +10,15 @@ import {
 } from '@nebular/auth';
 
 export const routes: Routes = [
-
+  {
+    path : '',
+    redirectTo : 'master-data-upload',
+    pathMatch : 'full'
+  },
+{
+  path:'master-data-upload',
+  loadChildren:() => import('./pages/masters/masters.module').then(m=>m.MastersModule)
+}
 ];
 
 const config: ExtraOptions = {

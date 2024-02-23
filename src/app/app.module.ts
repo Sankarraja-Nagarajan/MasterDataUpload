@@ -11,6 +11,7 @@ import { CoreModule } from './@core/core.module';
 import { ThemeModule } from './@theme/theme.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { MatPaginatorModule} from '@angular/material/paginator';
 import {
   NbChatModule,
   NbDatepickerModule,
@@ -20,6 +21,7 @@ import {
   NbToastrModule,
   NbWindowModule,
 } from '@nebular/theme';
+import { MasterTableInfoService } from './Services/master-table-info.service';
 
 @NgModule({
   declarations: [AppComponent],
@@ -39,7 +41,9 @@ import {
     }),
     CoreModule.forRoot(),
     ThemeModule.forRoot(),
+    MatPaginatorModule,
   ],
+  providers : [MasterTableInfoService],
   bootstrap: [AppComponent],
 })
 export class AppModule {
