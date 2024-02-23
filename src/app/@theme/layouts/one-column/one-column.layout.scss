@@ -6,4 +6,47 @@
   .menu-sidebar ::ng-deep .scrollable {
     padding-top: nb-theme(layout-padding-top);
   }
+
+  nb-layout-header nav{
+    background-color: #178af9cc !important;
+  }
+  ::ng-deep nb-layout-header nav {
+    max-height: 55px !important;
+    background-color: #6d89bd !important;
+    color: #fff !important;
+  }
+
+  ::ng-deep .menu-sidebar .scrollable {
+    padding-top: 0px !important;
+  }
+
+  ::ng-deep .menu-sidebar .scrollable{
+    max-width: 200px;
+    background-color: #fff;
+    color: #fff;
+  }
+  ::ng-deep nb-layout-header.fixed ~ .layout-container{
+    padding-top: 55px !important;
+  }
+
+  ::ng-deep .layout-container .content nb-layout-footer nav{
+    padding: 15px !important;
+  }
+
+  nb-sidebar{
+    max-width: 200px;
+    background: #fff;
+  }
+
+  ::ng-deep nb-layout .layout .layout-container nb-sidebar .main-container-fixed{
+    top: 55px !important;
+  }
+
+  ::ng-deep nb-layout-column .ng-container{
+    width: 100% !important;
+  }
+
+  ::ng-deep nb-layout .layout .layout-container .content .columns nb-layout-column{
+    padding: 0px !important;
+  }
 }

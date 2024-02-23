@@ -1,0 +1,137 @@
+.master-data-table-component {
+    min-height: 550px;
+    margin-top: 2px;
+}
+
+
+.workflow-table {
+    min-width: 200px;
+    max-width: 200px;
+    min-height: 40px;
+    max-height: 500px;
+    margin: 20px 0px 10px 10px;
+    overflow: auto;
+    overflow-x: hidden;
+    background-color: #fff;
+    box-shadow: 0px 0px 4px #6d89bd;
+    cursor: pointer;
+    border-left: 2px solid #6d89bd;
+    background-color: #6d89bd;
+
+    .workflow-table-names {
+        list-style: none;
+        min-width: 200px;
+        padding: 0px;
+
+        .table-list-header {
+            background-color: #6d89bd;
+            font-size: 14px;
+            position: sticky;
+            padding: 8px;
+            top: 0px;
+        }
+    }
+
+    .workflow-table-names .table-names {
+        padding: 8px;
+        text-decoration: none;
+        cursor: pointer;
+        font-size: 12px;
+        background-color: #fff !important;
+        color: #535353;
+        border-bottom: 0.5px solid #cfcfcf96;
+    }
+}
+
+
+
+.container {
+    gap: 10px;
+    padding: 10px;
+    width: 100%;
+
+    .header {
+        .template-download-btn {
+            .btn {
+                color: #fff;
+                background-color: #6d89bd;
+                font-size: 12px;
+
+                .download-img {
+                    fill: #fff !important;
+                    width: 15px;
+                    height: 15px;
+                }
+            }
+        }
+    }
+
+    .action-buttons {
+        .btn {
+            background-color: #6d89bd;
+            color: #fff;
+            font-size: 12px;
+            min-width: 100px;
+        }
+    }
+
+    .table-container {
+        max-height: 300px;
+        min-height: 300px;
+        overflow: auto;
+        box-shadow: 0px 0px 4px #6d89bd;
+
+    }
+}
+
+::ng-deep .mat-mdc-table .mat-mdc-header-cell {
+    background-color: #6d89bd !important;
+    font-size: 12px;
+    color: #fff;
+}
+
+::ng-deep .mat-mdc-table .mat-mdc-cell {
+    color: #535353 !important;
+    font-size: 12px;
+
+}
+
+::ng-deep .mat-mdc-table .mat-mdc-header-row {
+    height: 42px !important;
+}
+
+::ng-deep .mat-mdc-table .mat-mdc-row {
+    height: 42px !important;
+    max-height: 40px !important;
+    color: #8b8b8b !important;
+}
+
+::ng-deep .mat-mdc-table .mat-mdc-row:hover {
+    background-color: #ffffff !important;
+    color: #000 !important;
+}
+
+::ng-deep .mat-mdc-table .mat-mdc-row-focussed .mat-mdc-row {
+    background-color: #add8ffcc !important;
+}
+
+.form-control {
+    outline: none;
+    border: none;
+    box-shadow: none;
+    font-size: 12px;
+    border: 1px solid #8b8b8b;
+}
+
+@media (max-width: 767px) {
+    .workflow-table {
+        max-height: 300px;
+        min-width: 90%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .container{
+        padding-left: 20px;
+    }
+}

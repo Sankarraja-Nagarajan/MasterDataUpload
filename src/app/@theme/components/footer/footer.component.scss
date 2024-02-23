@@ -8,8 +8,13 @@
   justify-content: space-between;
   align-items: center;
 
+
+  .created-by{
+    font-size: .5rem;
+  }
+
   .socials {
-    font-size: 2rem;
+    font-size: 1rem;
 
     a {
       padding: 0.4rem;
@@ -27,4 +32,6 @@
       font-size: 1.5rem;
     }
   }
+
+  
 }
