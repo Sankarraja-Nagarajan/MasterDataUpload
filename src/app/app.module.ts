@@ -13,6 +13,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { MatPaginatorModule} from '@angular/material/paginator';
 import {
+  NbButtonModule,
   NbChatModule,
   NbDatepickerModule,
   NbDialogModule,
@@ -20,8 +21,11 @@ import {
   NbSidebarModule,
   NbToastrModule,
   NbWindowModule,
+  NbThemeModule,
+  NbLayoutModule
 } from '@nebular/theme';
 import { MasterTableInfoService } from './Services/master-table-info.service';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [AppComponent],
@@ -30,18 +34,23 @@ import { MasterTableInfoService } from './Services/master-table-info.service';
     BrowserAnimationsModule,
     HttpClientModule,
     AppRoutingModule,
+    NbLayoutModule,
     NbSidebarModule.forRoot(),
     NbMenuModule.forRoot(),
     NbDatepickerModule.forRoot(),
     NbDialogModule.forRoot(),
     NbWindowModule.forRoot(),
     NbToastrModule.forRoot(),
+    NbThemeModule.forRoot(),
     NbChatModule.forRoot({
       messageGoogleMapKey: 'AIzaSyA_wNuCzia92MAmdLRzmqitRGvCF7wCZPY',
     }),
     CoreModule.forRoot(),
     ThemeModule.forRoot(),
     MatPaginatorModule,
+    MatSnackBarModule,
+    NbButtonModule,
+
   ],
   providers : [MasterTableInfoService],
   bootstrap: [AppComponent],
