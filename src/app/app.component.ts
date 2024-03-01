@@ -14,7 +14,7 @@ import { FormGroup } from '@angular/forms';
 @Component({
   selector: 'ngx-app',
   template: `<ngx-one-column-layout>
-  <nb-menu tag="menu" [items]="menu" autoCollapse="true"></nb-menu> 
+  <nb-menu tag="menu" [items]="menu" autoCollapse="true"></nb-menu>
   <router-outlet></router-outlet>
  </ngx-one-column-layout>`,
   styleUrls: ['app.component.scss']
@@ -41,7 +41,7 @@ export class AppComponent implements OnInit {
     },
     {
       title: "TCI",
-      link: '/master-data-upload/workflows',  
+      link: '/master-data-upload/workflows',
       queryParams: { workflowName: "TCI" },
       icon: 'layout-outline',
     },
@@ -74,7 +74,7 @@ export class AppComponent implements OnInit {
     //     {
     //       title: 'Bsak',
     //       link: '/master-data-upload/tci',
-    //       queryParams: { name : 'Bsak'},          
+    //       queryParams: { name : 'Bsak'},
     //     },
     //     {
     //       title: 'Ekko',
