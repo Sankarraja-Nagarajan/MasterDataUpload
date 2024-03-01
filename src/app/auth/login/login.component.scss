@@ -1,0 +1,166 @@
+.row {
+    --bs-gutter-x: 0;
+}
+
+::ng-deep nb-layout-column,
+nb-layout {
+    padding: 0px !important;
+}
+
+.success {
+    background-color: aqua !important;
+}
+
+.main {
+    height: 100vh;
+    width: 100%;
+    background-color: #fff;
+
+    .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .image {
+            .vendor-img {
+                width: 550px;
+            }
+        }
+    }
+
+    .login {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .login-form {
+            height: 54vh;
+            width: 60%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            // border-top-right-radius: 70px;
+            background-color: white;
+
+            .input-label {
+                font-size: 12px;
+                margin-bottom: 10px;
+                color: #5c5c5c;
+                font-weight: 800;
+
+            }
+
+            .form-group {
+                border-bottom: 1px solid;
+                height: 30px;
+                width: 212px;
+                display: flex;
+                margin-bottom: 20px;
+
+                ::placeholder {
+                    color: #acacac;
+                    opacity: 1;
+                    font-size: 12px;
+                    letter-spacing: 0.3px;
+                }
+
+                .eye-icon {
+
+                    font-size: 16px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .form-control {
+                    width: 300px;
+                }
+
+                .user-img {
+                    height: 16px;
+                    min-width: 16px;
+                    margin-right: 10px;
+                }
+
+                .input-email {
+                    width: 160px;
+                    outline: none;
+                    border: none;
+                    font-size: 14px;
+                    height: 20px;
+                    font-weight: 800;
+                }
+            }
+
+            .form-group-heading {
+                height: 50px;
+                font-family:'Gill Sans';
+                margin-bottom: 12px;
+                font-size: 28px;
+                font-weight: 600;
+            }
+
+            .btn {
+                margin-top: 40px;
+                margin-bottom: 10px;
+                height: 30px;
+                width: 214px;
+                font-size: 14px;
+                // text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                // background-color: #6d89bd;
+                // border: #6d89bd;
+                border-radius: 0px;
+            }
+
+            .form-group-title {
+                height: 70px;
+                display: flex;
+                justify-content: center;
+                align-items: start;
+             
+                .title {
+                    font-size: 14px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-weight: 600;
+                    height: 38px;
+
+                }
+
+                .logo {
+                    width: 130px !important;
+                    height: 44px !important;
+                    // margin-bottom: 10px !important;
+                    
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .vendor-img {
+        max-width: 356px;
+        margin-top: 162px;
+        margin-left: 64px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199.98px) {
+    .login-form {
+        min-width: 300px;
+    }
+}
+
+.red-snackbar {
+    background-color: aqua;
+}
+
+.blue-snackbar {
+    background-color: azure;
+}

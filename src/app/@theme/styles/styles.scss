@@ -36,3 +36,24 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+// .mat-mdc-snack-bar-container .mdc-snackbar__label {
+//   color: var(--mdc-snackbar-supporting-text-color, inherit);
+//   background-color: aqua;
+// }
+
+.danger.mat-mdc-snack-bar-container
+{ .mdc-snackbar__surface {
+  background-color:#990000 !important;
+  // min-width: 100px !important;
+  text-align: center !important;
+}
+}
+
+
+.success.mat-mdc-snack-bar-container
+{ .mdc-snackbar__surface {
+    background-color: #004d00 !important;
+// min-width: 100px !important;
+text-align: center !important;
+  }
+}
