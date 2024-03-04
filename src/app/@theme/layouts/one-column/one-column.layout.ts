@@ -1,4 +1,4 @@
-import { Component,OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NbMenuService } from '@nebular/theme';
 import { NavigationEnd, Router } from '@angular/router';
 
@@ -26,23 +26,21 @@ import { NavigationEnd, Router } from '@angular/router';
   `,
 })
 export class OneColumnLayoutComponent implements OnInit {
-  isLogin:boolean =true
+  isLogin: boolean = true
   selectedMenu;
-  constructor(private _router:Router,private _menuService : NbMenuService){}
+  constructor(private _router: Router, private _menuService: NbMenuService) { }
   ngOnInit(): void {
     this._router.events.subscribe({
-      next:(res)=>{
-        if(res instanceof NavigationEnd)
-        {
-          if(res.url.includes("login"))
-          {
-            this.isLogin=false;
+      next: (res) => {
+        if (res instanceof NavigationEnd) {
+          if (res.urlAfterRedirects.includes("login")) {
+            this.isLogin = false;
           }
         }
       }
     });
   }
-  itemSelected(){
+  itemSelected() {
     this._menuService.getSelectedItem('menu-sidebar').subscribe((data) => {
       console.log(data?.item.title);
     })
