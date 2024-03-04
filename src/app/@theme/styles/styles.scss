@@ -22,6 +22,7 @@
 
 
 @import '~bootstrap-icons/font/bootstrap-icons.css';
+
 // install the framework and custom global styles
 @include nb-install() {
 
@@ -34,38 +35,50 @@
   @include ngx-pace-theme();
 
   @include nb-overrides();
-};
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  .danger.mat-mdc-snack-bar-container
-  { .mdc-snackbar__surface {
-    background-color:#990000 !important;
-    // min-width: 100px !important;
-    text-align: center !important;
+;
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+  .danger.mat-mdc-snack-bar-container {
+    .mdc-snackbar__surface {
+      background-color: #990000 !important;
+      // min-width: 100px !important;
+      text-align: center !important;
+    }
   }
-}
-  .success.mat-mdc-snack-bar-container
-  { .mdc-snackbar__surface {
-    background-color: #004d00 !important;
-    // min-width: 100px !important;
-    text-align: center !important;
+
+  .success.mat-mdc-snack-bar-container {
+    .mdc-snackbar__surface {
+      background-color: #004d00 !important;
+      // min-width: 100px !important;
+      text-align: center !important;
+    }
   }
+
+  .row {
+    --bs-gutter-x: 0px !important;
   }
 
-.row{
-  --bs-gutter-x : 0px !important;
-}
-::-webkit-scrollbar{
-  width: 3px;
-  height: 4px;
-  border-radius: 5px;
-}
+  ::-webkit-scrollbar {
+    width: 3px;
+    height: 4px;
+    border-radius: 5px;
+  }
 
-::-webkit-scrollbar-thumb{
-  background-color: #8286b3 !important;
-}
+  ::-webkit-scrollbar-thumb {
+    background-color: #8286b3 !important;
+  }
 
-::-webkit-scrollbar-track{
-  background-color: #e0e0e0;
+  ::-webkit-scrollbar-track {
+    background-color: #e0e0e0;
+  }
 }

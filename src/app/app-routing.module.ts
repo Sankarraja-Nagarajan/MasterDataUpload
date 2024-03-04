@@ -11,23 +11,18 @@ import {
 
 export const routes: Routes = [
   {
-    path : '',
-    redirectTo : 'master-data-upload',
-    pathMatch : 'full'
+    path: 'auth',
+    loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)
   },
-{
-  path:'master-data-upload',
-  loadChildren:() => import('./pages/masters/masters.module').then(m=>m.MastersModule)
-},
-{
-  path:'',
-  redirectTo:'auth',
-  pathMatch:'full'
-},
-{
-  path:'auth',
-  loadChildren:()=>import('./auth/auth.module').then(m =>m.AuthModule)
-}
+  {
+    path: 'master-data-upload',
+    loadChildren: () => import('./pages/masters/masters.module').then(m => m.MastersModule)
+  },
+  {
+    path: '',
+    redirectTo: 'auth',
+    pathMatch: 'full'
+  },
 ];
 
 const config: ExtraOptions = {
