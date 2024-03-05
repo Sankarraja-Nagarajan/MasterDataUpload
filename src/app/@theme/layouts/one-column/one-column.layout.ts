@@ -36,6 +36,10 @@ export class OneColumnLayoutComponent implements OnInit {
           if (res.urlAfterRedirects.includes("login")) {
             this.isLogin = false;
           }
+          else
+          {
+            this.isLogin = true;
+          }
         }
       }
     });

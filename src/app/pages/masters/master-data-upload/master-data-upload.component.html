@@ -2,15 +2,16 @@
     <div class="workflow-table-container">
         <div class="workflow-table">
             <div class="workflow-table-names d-flex flex-column">
-                <div class="table-list-header fs-6 text-light">Table Names</div>
-                <a *ngFor="let table of tableNames" class="table-names">{{table}} 
+                <div class="table-list-header fs-6 text-dark">Table Names</div>
+                <a *ngFor="let table of tableNames" [ngClass]="table == selectedTable ? 'selectedTableHighlight' : ''"
+                    (click)="selectedTable = table" class="table-names">{{table | titlecase}}
                 </a>
             </div>
         </div>
     </div>
     <div class="container row">
         <div class="d-flex justify-content-between header h3">
-            <span class="table-name">{{title || "Table Name"}}</span>
+            <span class="table-name">{{workFlowTable}} - <span class="fs-4">{{selectedTable | titlecase}}</span></span>
 
             <span class="template-download-btn d-flex justify-content-center align-items-center">
                 <button class="btn d-flex align-items-center gap-2">

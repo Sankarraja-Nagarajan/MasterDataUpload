@@ -3,22 +3,26 @@ import { Injectable } from '@angular/core';
 @Injectable()
 
 export class MasterTableInfoService {
-    tableName: string = '';
+    tableName: string = 'TCI';
 
     tableInfo = {
         TCI: {
-            displayedColumns: ["ID", "poNumber", "price", "currency"],
+            displayedColumns: ["ID", "PO_Number", "Price", "Currency"],
             name: "Bsak"
         },
-        Enko: {
+        RCR: {
             displayedColumns: ['ID', 'PO_Number', 'Price', 'Currency'],
             title: "Enko"
         },
-        Ekko: {
+        FOC: {
             displayedColumns: ['id', 'materialName', 'PO_Number'],
             title: "Ekko"
         },
-        Acc: {
+        VendorAdvance: {
+            displayedColumns: ['ID', 'PO_Number', 'Price', 'Currency'],
+            title: "Acc"
+        },
+        SalesPrice: {
             displayedColumns: ['ID', 'PO_Number', 'Price', 'Currency'],
             title: "Acc"
         },

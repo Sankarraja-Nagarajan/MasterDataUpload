@@ -6,11 +6,6 @@ import { MatTableModule } from '@angular/material/table';
 
 const routes : Routes = [
   {
-    path : '',
-    redirectTo : 'workflows',
-    pathMatch : 'full'
-  },
-  {
     path : 'workflows',
     component : MasterDataUploadComponent
   }
