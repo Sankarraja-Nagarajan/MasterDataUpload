@@ -1,6 +1,6 @@
 .master-data-table-component {
     min-height: 550px;
-    margin-top: 2px;
+    margin-top: 10px;
 }
 
 
@@ -12,11 +12,8 @@
     margin: 20px 0px 10px 10px;
     overflow: auto;
     overflow-x: hidden;
-    background-color: #fff;
     box-shadow: 0px 0px 4px #6d89bd;
     cursor: pointer;
-    border-left: 2px solid #6d89bd;
-    background-color: #6d89bd;
 
     .workflow-table-names {
         list-style: none;
@@ -24,10 +21,12 @@
         padding: 0px;
 
         .table-list-header {
-            background-color: #6d89bd;
+            background-color: #fff;
+            border-bottom: 0.5px solid #cecece;
             font-size: 14px;
             position: sticky;
             padding: 8px;
+            z-index: 2;
             top: 0px;
         }
     }
@@ -36,17 +35,28 @@
         padding: 8px;
         text-decoration: none;
         cursor: pointer;
+        // border-left: 2px solid #6d89bd;
         font-size: 12px;
-        background-color: #fff !important;
+        background-color: #fff;
         color: #535353;
+        z-index: 1;
         border-bottom: 0.5px solid #cfcfcf96;
     }
 }
 
+.selectedTableHighlight {
+    background-color: #6d89bd !important;
+    color: #fff !important;
+    border: none;
+    border-left: 2px solid #fff !important;
+    // font-weight: bold;
+    box-shadow: 0px 2px 6px #d1d1d1;
+    transform: scale(1);
+}
 
 
 .container {
-    gap: 10px;
+    gap: 34px;
     padding: 10px;
     width: 100%;
 
@@ -79,7 +89,7 @@
         max-height: 300px;
         min-height: 300px;
         overflow: auto;
-        box-shadow: 0px 0px 4px #6d89bd;
+        // box-shadow: 0px 0px 4px #6d89bd;
 
     }
 }
@@ -131,7 +141,21 @@
         margin-left: auto;
     }
 
-    .container{
+    .container {
         padding-left: 20px;
+    }
+}
+
+@media (min-width : 1024px){
+    .workflow-table{
+        max-height: 640px;
+        min-height: 500px;
+    }
+    .table-container {
+        max-height: 400px !important;
+        min-height: 400px !important;
+    }
+    .master-data-table-component {
+        margin-top: 15px;
     }
 }

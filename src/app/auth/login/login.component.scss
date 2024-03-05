@@ -23,7 +23,8 @@ nb-layout {
 
         .image {
             .vendor-img {
-                width: 550px;
+                width: 610px;
+                transform: rotateY(180deg);
             }
         }
     }
@@ -114,6 +115,9 @@ nb-layout {
                 // background-color: #6d89bd;
                 // border: #6d89bd;
                 border-radius: 0px;
+                background-color: #6d89bd;
+                outline: none;
+                border: #6d89bd;
             }
 
             .form-group-title {
@@ -145,9 +149,9 @@ nb-layout {
 
 @media (min-width: 768px) and (max-width: 991.98px) {
     .vendor-img {
-        max-width: 356px;
-        margin-top: 162px;
-        margin-left: 64px;
+        max-width: 400px;
+        margin-top: 140px;
+        margin-left: 50px;
     }
 }
 
@@ -156,6 +160,12 @@ nb-layout {
         min-width: 300px;
     }
 }
+
+@media (min-width: 320px) and (max-width: 375px) {
+    .login-form {
+        min-width: 240px;
+    }}
+
 
 .red-snackbar {
     background-color: aqua;

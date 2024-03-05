@@ -30,7 +30,7 @@
   }
 
   ::ng-deep .layout-container .content nb-layout-footer nav{
-    padding: 15px !important;
+    padding: 20px !important;
   }
 
   nb-sidebar{
@@ -46,7 +46,10 @@
     width: 100% !important;
   }
 
-  ::ng-deep nb-layout .layout .layout-container .content .columns nb-layout-column{
+  ::ng-deep nb-layout .layout .layout-container .content .columns nb-layout-column {
     padding: 0px !important;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
   }
 }
