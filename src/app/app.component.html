@@ -1,3 +1,31 @@
 <ngx-one-column-layout>
+
+    <mat-tab-group fitInkBarToContent (selectedTabChange)="tabClick($event)">
+        <mat-tab label="WORKFLOWS" disabled>
+            <ng-template mat-tab-label><mat-icon
+                    class="header-mat-icon">table_chart</mat-icon>WORKFLOWS</ng-template></mat-tab>
+
+        <mat-tab label="TCI">
+            <ng-template mat-tab-label><mat-icon class="mat-icon"
+                    [ngClass]="workFlowTable=='TCI' ? 'isClicked' : ''">table_chart</mat-icon>TCI</ng-template></mat-tab>
+
+        <mat-tab label="RCR">
+            <ng-template mat-tab-label><mat-icon class="mat-icon"
+                    [ngClass]="workFlowTable=='RCR' ? 'isClicked' : ''">table_chart</mat-icon>RCR</ng-template></mat-tab>
+
+        <mat-tab label="VendorAdvance">
+            <ng-template mat-tab-label><mat-icon class="mat-icon"
+                    [ngClass]="workFlowTable=='VendorAdvance' ? 'isClicked' : ''">table_chart</mat-icon>VendorAdvance</ng-template></mat-tab>
+
+        <mat-tab label="FOC">
+            <ng-template mat-tab-label><mat-icon class="mat-icon"
+                    [ngClass]="workFlowTable == 'FOC' ? 'isClicked' : ''">table_chart</mat-icon>FOC</ng-template></mat-tab>
+
+        <mat-tab label="SalesPrice">
+            <ng-template mat-tab-label><mat-icon class="mat-icon"
+                    [ngClass]="workFlowTable== 'SalesPrice' ? 'isClicked' : ''">table_chart</mat-icon>SalesPrice</ng-template></mat-tab>
+
+    </mat-tab-group>
+
     <router-outlet></router-outlet>
 </ngx-one-column-layout>

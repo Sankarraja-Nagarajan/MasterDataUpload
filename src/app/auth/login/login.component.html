@@ -1,22 +1,25 @@
 <div class="main row">
-    <div class="content col-md-7 col-sm-12  d-none d-md-block d-lg-flex ">
-        <div class="image">
-            <img class="vendor-img" src="assets\images\Programming-rafiki.png" alt="vendor">
+    <div class="content col-md-8 col-sm-12 flex-column d-none d-md-block d-lg-flex ">
+        <div class="conti">
+            <img class="conti-logo" src="assets\images\Continental_Logo_Tagline_Black_sRGB.png" alt="conti-logo">
+        </div>
+        <div class="image m-auto">
+            <img class="vendor-img " src="assets\images\Programming-rafiki.png" alt="vendor">
         </div>
     </div>
-    <div class="login col-md-5">
-        <div class="login-form shadow-lg">
-            <div class="form-group-title">
-                <span class="title">Welcome to  </span>
+    <div class="login col-md-4">
+        <div class="login-form shadow">
+            <!-- <div class="form-group-title">
+                <span class="title">Welcome to </span>
                 <span><img class="logo" src="assets\images\continentallogo.png" alt="logo"></span>
-            </div>
+            </div> -->
             <div class="form-group-heading">
                 Login
             </div>
             <form [formGroup]="loginPage">
                 <div class="input-label"><span>UserId</span> </div>
                 <div class="form-group">
-                   
+
                     <div class="user"><img class="user-img" src="assets\images\user.png" alt="user"></div>
                     <div><input class="input-email" type="text" placeholder="Enter UserId" formControlName="userId">
                     </div>
@@ -26,7 +29,7 @@
                     <div class="user"><img class="user-img" src="assets\images\lock.png" alt="user"></div>
                     <div><input class="input-email" [type]="showPassword ? 'text' : 'password'" name="password"
                             placeholder="Enter Password" formControlName="passWord">
-                        
+
                     </div>
                     <mat-icon class="eye-icon" matSuffix (click)="togglePasswordVisibility()">
                         {{showPassword?'visibility_off':'visibility'}}
