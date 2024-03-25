@@ -3,8 +3,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { snackbarStatus } from '../Enum/enum';
 import { NbComponentStatus, NbGlobalPhysicalPosition, NbToastrService } from '@nebular/theme';
 import { Router } from '@angular/router';
-import { ServicesService } from '../../Services/services.service';
 import { CommonSnackBarService } from '../../Services/common-snack-bar.service';
+import { UserLoginService } from '../../Services/user-login.service';
 // import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
@@ -17,10 +17,10 @@ export class LoginComponent {
   positions = NbGlobalPhysicalPosition;
   index: any;
   constructor(private _fb: FormBuilder,
-    private _service: ServicesService,
+    private _service: UserLoginService,
     private _snack: CommonSnackBarService,
     private toastrService: NbToastrService,
-    private _router : Router
+    private _router: Router
   ) {
     this.loginPage = _fb.group({
       userId: ['', Validators.required],
@@ -29,25 +29,22 @@ export class LoginComponent {
   }
   login() {
     const name = this.loginPage.value.userId.toLowerCase()
-    if (this._service.userName == name && this._service.passWord == this.loginPage.value.passWord) 
-    {
+    if (this._service.userName == name && this._service.passWord == this.loginPage.value.passWord) {
       this._router.navigate(['/master-data-upload/workflows']);
-    this._snack.openSnackbar('Succesfully Login',snackbarStatus.Success);
+      this._snack.openSnackbar('Succesfully Login', snackbarStatus.Success);
     }
-     else if (this._service.userName != name)
-       {
-        this._snack.openSnackbar('Invalid UserId', snackbarStatus.Danger)
-       }
-      else if(this._service.passWord!= this.loginPage.value.passWord)
-       {
-        this._snack.openSnackbar('Invalid Password', snackbarStatus.Danger)
-       }
+    else if (this._service.userName != name) {
+      this._snack.openSnackbar('Invalid UserId', snackbarStatus.Danger)
     }
- 
-    public showPassword: boolean = false;
+    else if (this._service.passWord != this.loginPage.value.passWord) {
+      this._snack.openSnackbar('Invalid Password', snackbarStatus.Danger)
+    }
+  }
 
-    public togglePasswordVisibility(): void {
-      this.showPassword = !this.showPassword;
-    }
+  public showPassword: boolean = false;
+
+  public togglePasswordVisibility(): void {
+    this.showPassword = !this.showPassword;
+  }
 
 }

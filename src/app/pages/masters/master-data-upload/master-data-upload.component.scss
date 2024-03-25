@@ -1,11 +1,11 @@
 .master-data-table-component {
-    min-height: 550px;
+    min-height: calc(100vh - 150px);
     margin-top: 10px;
 }
 
 
 .workflow-table {
-    min-width: 200px;
+    // min-width: 200px;
     max-width: 200px;
     min-height: 40px;
     max-height: 500px;
@@ -55,12 +55,22 @@
 }
 
 
-.container {
-    gap: 34px;
+.master-data-container {
+    // gap: 34px;
     padding: 10px;
+    max-width: inherit;
+    overflow: auto;
     width: 100%;
 
-    .header {
+    .master-data-header {
+
+        .info-icon {
+            height: 16px;
+            width: 16px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
         .template-download-btn {
             .btn {
                 color: #fff;
@@ -76,6 +86,10 @@
         }
     }
 
+    .mat-mdc-form-field {
+        height: 60px;
+    }
+
     .action-buttons {
         .btn {
             background-color: #6d89bd;
@@ -86,11 +100,44 @@
     }
 
     .table-container {
-        max-height: 300px;
-        min-height: 300px;
+        max-height: 250px;
         overflow: auto;
-        // box-shadow: 0px 0px 4px #6d89bd;
 
+
+
+        .edit-input {
+            height: 30px;
+            font-size: 14px;
+            padding-left: 4px;
+            outline: none;
+        }
+
+        .mat-mdc-button {
+            background-color: #6d89bd;
+            color: #fff !important;
+            font-size: 12px;
+            width: 10px;
+        }
+
+        .mat-icon {
+            font-size: 16px;
+            height: 16px;
+            width: 16px;
+        }
+
+        .edit-squareBtn {
+            cursor: pointer;
+        }
+
+        .saveBtn {
+            color: #008000;
+            cursor: pointer;
+        }
+
+        .cancelBtn {
+            color: #f00;
+            cursor: pointer;
+        }
     }
 }
 
@@ -125,12 +172,36 @@
     background-color: #add8ffcc !important;
 }
 
+::ng-deep .mat-mdc-text-field-wrapper {
+    height: 46px !important;
+}
+
+::ng-deep .mat-mdc-text-field-wrapper.mdc-text-field--outlined .mat-mdc-form-field-infix {
+    padding-top: 9px;
+    padding-bottom: 10px;
+}
+
 .form-control {
     outline: none;
     border: none;
     box-shadow: none;
     font-size: 12px;
     border: 1px solid #8b8b8b;
+}
+
+
+.mat-spinner-container {
+    opacity: 0.7;
+    height: 100%;
+
+    .mat-spinner {
+        color: #f00 !important;
+    }
+
+    .mat-progress-spinner circle {
+        stroke-width: 8px;
+    }
+
 }
 
 @media (max-width: 767px) {
@@ -146,15 +217,17 @@
     }
 }
 
-@media (min-width : 1024px){
-    .workflow-table{
+@media (min-width : 1024px) {
+    .workflow-table {
         max-height: 640px;
-        min-height: 500px;
+        // min-height: 500px;
     }
+
     .table-container {
-        max-height: 400px !important;
-        min-height: 400px !important;
+        // max-height: 400px !important;
+        // min-height: 200px !important;
     }
+
     .master-data-table-component {
         margin-top: 15px;
     }

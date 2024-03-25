@@ -24,10 +24,10 @@ export class CommonSnackBarService {
         status === snackbarStatus.Success
           ? "success"
           : status === snackbarStatus.Danger
-          ? "danger"
-          : status === snackbarStatus.Warning
-          ? "warning"
-          : "info",
+            ? "danger"
+            : status === snackbarStatus.Warning
+              ? "warning"
+              : "info",
     };
     this._snackbar.open(message, "", config);
   }

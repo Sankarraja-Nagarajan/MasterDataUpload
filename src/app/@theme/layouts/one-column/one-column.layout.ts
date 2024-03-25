@@ -12,7 +12,7 @@ import { NavigationEnd, Router } from '@angular/router';
       </nb-layout-header>
 
       <nb-sidebar class="menu-sidebar" tag="menu-sidebar" responsive *ngIf="isLogin">
-        <ng-content select="nb-menu"></ng-content>
+        <ng-content select="mat-tab-group"></ng-content>
       </nb-sidebar>
 
       <nb-layout-column>
@@ -36,8 +36,7 @@ export class OneColumnLayoutComponent implements OnInit {
           if (res.urlAfterRedirects.includes("login")) {
             this.isLogin = false;
           }
-          else
-          {
+          else {
             this.isLogin = true;
           }
         }

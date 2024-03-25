@@ -17,14 +17,35 @@ nb-layout {
     background-color: #fff;
 
     .content {
+        background-color: #e6edfd;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        // justify-content: center;
+        // align-items: center;
+
+        .conti {
+            height: 10vh;
+            width: 674px;
+            margin-left: 30px;
+            margin-top: 10px;
+            // background-color: #6d89bd;
+
+
+        }
+
+        .conti-logo {
+            width: 200px;
+            height: 10vh;
+            // background-color: #fff;
+
+        }
 
         .image {
+            // margin-bottom: 20px !important;
+
             .vendor-img {
-                width: 610px;
+                width: 510px;
                 transform: rotateY(180deg);
+
             }
         }
     }
@@ -32,17 +53,24 @@ nb-layout {
     .login {
         display: flex;
         justify-content: center;
+        min-height: 30%;
         align-items: center;
+        background-color: #6d89bd;
 
         .login-form {
-            height: 54vh;
+            min-height: inherit;
             width: 60%;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            // border-top-right-radius: 70px;
+            // background-color: #6d89bd;
+            padding: 10px;
+
             background-color: white;
+            border-top-right-radius: 22px;
+            border-bottom-left-radius: 22px;
+            // box-shadow: 0px 0px 20px #afafaf;
 
             .input-label {
                 font-size: 12px;
@@ -96,24 +124,22 @@ nb-layout {
 
             .form-group-heading {
                 height: 50px;
-                font-family:'Gill Sans';
+                font-family: 'Gill Sans';
                 margin-bottom: 12px;
+                padding-top: 14px;
                 font-size: 28px;
                 font-weight: 600;
             }
 
             .btn {
-                margin-top: 40px;
-                margin-bottom: 10px;
+                margin-top: 10px;
+                margin-bottom: 20px;
                 height: 30px;
                 width: 214px;
                 font-size: 14px;
-                // text-align: center;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                // background-color: #6d89bd;
-                // border: #6d89bd;
                 border-radius: 0px;
                 background-color: #6d89bd;
                 outline: none;
@@ -125,7 +151,7 @@ nb-layout {
                 display: flex;
                 justify-content: center;
                 align-items: start;
-             
+
                 .title {
                     font-size: 14px;
                     display: flex;
@@ -133,14 +159,15 @@ nb-layout {
                     align-items: center;
                     font-weight: 600;
                     height: 38px;
+                    margin-top: 12px;
 
                 }
 
                 .logo {
                     width: 130px !important;
                     height: 44px !important;
-                    // margin-bottom: 10px !important;
-                    
+                    margin-top: 10px !important;
+
                 }
             }
         }
@@ -149,9 +176,9 @@ nb-layout {
 
 @media (min-width: 768px) and (max-width: 991.98px) {
     .vendor-img {
-        max-width: 400px;
-        margin-top: 140px;
-        margin-left: 50px;
+        max-width: 480px;
+        margin-top: 356px;
+        margin-left: 12px;
     }
 }
 
@@ -164,7 +191,8 @@ nb-layout {
 @media (min-width: 320px) and (max-width: 375px) {
     .login-form {
         min-width: 240px;
-    }}
+    }
+}
 
 
 .red-snackbar {

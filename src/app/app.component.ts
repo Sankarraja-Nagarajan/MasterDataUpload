@@ -6,27 +6,26 @@
 import { Component, OnInit } from '@angular/core';
 import { AnalyticsService } from './@core/utils/analytics.service';
 import { SeoService } from './@core/utils/seo.service';
-import { Router } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
 import { NbMenuItem, NbMenuService } from '@nebular/theme';
 import { MasterTableInfoService } from './Services/master-table-info.service';
 import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'ngx-app',
-  template: `<ngx-one-column-layout>
-  <nb-menu tag="menu" [items]="menu"></nb-menu>
-  <router-outlet></router-outlet>
- </ngx-one-column-layout>`,
+  templateUrl: 'app.component.html',
   styleUrls: ['app.component.scss']
 })
 export class AppComponent implements OnInit {
 
-  subHeader: string = '';
+  workFlowTable: string = '';
+
   constructor(private analytics: AnalyticsService,
     private seoService: SeoService,
     private _route: Router,
     private menuService: NbMenuService,
     private _masterTableInfoService: MasterTableInfoService) {
+
   }
 
   ngOnInit(): void {
@@ -62,4 +61,12 @@ export class AppComponent implements OnInit {
     }
   ];
 
+
+  tabClick(event) {
+    this.workFlowTable = event.tab.textLabel;
+    this._masterTableInfoService.setData(this.workFlowTable);
+    this._masterTableInfoService.workFlowName = event.tab.textLabel;
+  }
 }
+
+

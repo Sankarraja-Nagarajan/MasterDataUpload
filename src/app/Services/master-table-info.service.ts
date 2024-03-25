@@ -1,30 +1,24 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject, Observable, Subject } from 'rxjs';
 
 @Injectable()
 
 export class MasterTableInfoService {
-    tableName: string = 'TCI';
 
-    tableInfo = {
-        TCI: {
-            displayedColumns: ["ID", "PO_Number", "Price", "Currency"],
-            name: "Bsak"
-        },
-        RCR: {
-            displayedColumns: ['ID', 'PO_Number', 'Price', 'Currency'],
-            title: "Enko"
-        },
-        FOC: {
-            displayedColumns: ['id', 'materialName', 'PO_Number'],
-            title: "Ekko"
-        },
-        VendorAdvance: {
-            displayedColumns: ['ID', 'PO_Number', 'Price', 'Currency'],
-            title: "Acc"
-        },
-        SalesPrice: {
-            displayedColumns: ['ID', 'PO_Number', 'Price', 'Currency'],
-            title: "Acc"
-        },
+    workFlowName: string = '';
+
+    constructor() { }
+
+
+    // workflowObservable = new Observable(subscriber => {
+    //     subscriber.next(this.workFlowName);
+    // })
+
+    public dataSubject: BehaviorSubject<any> = new BehaviorSubject<any>(null);
+
+
+    setData(data: any) {
+        this.workFlowName = data;
+        this.dataSubject.next(this.workFlowName);
     }
 }

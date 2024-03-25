@@ -6,12 +6,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { CoreModule } from './@core/core.module';
 import { ThemeModule } from './@theme/theme.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { MatPaginatorModule} from '@angular/material/paginator';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatTabsModule } from '@angular/material/tabs';
 import {
   NbButtonModule,
   NbChatModule,
@@ -26,6 +27,8 @@ import {
 } from '@nebular/theme';
 import { MasterTableInfoService } from './Services/master-table-info.service';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { CustomInterceptor } from './Interceptors/custom.interceptor';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [AppComponent],
@@ -50,9 +53,11 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatPaginatorModule,
     MatSnackBarModule,
     NbButtonModule,
+    MatTabsModule,
+    MatIconModule
 
   ],
-  providers : [MasterTableInfoService],
+  providers: [MasterTableInfoService, { provide: HTTP_INTERCEPTORS, useClass: CustomInterceptor, multi: true }],
   bootstrap: [AppComponent],
 })
 export class AppModule {
